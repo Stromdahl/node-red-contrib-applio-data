@@ -1,0 +1,18 @@
+{
+  "name": "red-contrib-applio-data",
+  "version": "1.0.0",
+  "description": "Applio data api nodes for Node-RED",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Mattias Strömdahl",
+  "license": "MIT",
+  "node-red": {
+    "nodes": {
+      "applio-device": "applio-data/applio-data.js"
+    }
+  },
+  "dependencies": {
+    "axios": "^0.24.0"
+  }
+}

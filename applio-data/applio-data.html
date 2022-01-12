@@ -1,0 +1,64 @@
+<script type="text/javascript">
+    RED.nodes.registerType('applio-config',{
+        category: 'config',
+        defaults:{
+            configname: {value: "", required: true}
+        },
+        credentials:{
+            token: {type: "text"}
+        },
+        label: function () {
+            return this.configname
+        }
+    })
+</script>
+
+<script type="text/html" data-template-name="applio-config">
+    <div class="form-row" style="min-width: 700px;"></div>
+        <label for="node-config-input-configname"><i class="fa fa-tag"></i> Name</label>
+        <input type="text" id="node-config-input-configname" placeholder="Name">
+    </div>
+    <div class="form-row" style="min-width: 700px;"></div>
+        <label for="node-config-input-token"><i class="fa fa-key"></i> Token</label>
+        <input type="text" id="node-config-input-token" placeholder="token">
+    </div>
+</script>
+
+<script type="text/html" data-help-name="applio-config">
+    <p>A simple node that resturns connecterd devices</p>
+</script>
+
+
+<!-- ---------------------------------------------------------------------------- -->
+<script type="text/javascript">
+    RED.nodes.registerType('applio-device',{
+        category: 'applio free',
+        color: '#20c997',
+        defaults: {
+            name: {value:""},
+            config: { value:"", type: "applio-config", required: true }
+        },
+        inputs:1,
+        outputs:1,
+        icon: "file.png",
+        paletteLabel: "device",
+        label: function() {
+            return this.name||"applio-device";
+        }
+    });
+</script>
+
+<script type="text/html" data-template-name="applio-device">
+    <div class="form-row">
+        <label for="node-input-config"><i class="fa fa-tag"></i>Config</label>
+        <input type="text" id="node-input-config" placeholder="Config">
+    </div>
+    <div class="form-row">
+        <label for="node-input-name"><i class="fa fa-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+</script>
+
+<script type="text/html" data-help-name="applio-device">
+    <p>A simple node that resturns connecterd devices</p>
+</script>
