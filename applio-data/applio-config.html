@@ -1,0 +1,29 @@
+<script type="text/javascript">
+    RED.nodes.registerType('applio-config',{
+        category: 'config',
+        defaults:{
+            configname: {value: "", required: true}
+        },
+        credentials:{
+            token: {type: "text"}
+        },
+        label: function () {
+            return this.configname
+        }
+    })
+</script>
+
+<script type="text/html" data-template-name="applio-config">
+    <div class="form-row" style="min-width: 700px;"></div>
+        <label for="node-config-input-configname"><i class="fa fa-tag"></i> Name</label>
+        <input type="text" id="node-config-input-configname" placeholder="Name">
+    </div>
+    <div class="form-row" style="min-width: 700px;"></div>
+        <label for="node-config-input-token"><i class="fa fa-key"></i> Token</label>
+        <input type="text" id="node-config-input-token" placeholder="token">
+    </div>
+</script>
+
+<script type="text/html" data-help-name="applio-config">
+    <p>A simple node that resturns connecterd devices</p>
+</script>

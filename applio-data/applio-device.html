@@ -1,0 +1,32 @@
+<script type="text/javascript">
+    RED.nodes.registerType('applio-device',{
+        category: 'applio',
+        color: '#20c997',
+        defaults: {
+            name: {value:""},
+            config: { value:"", type: "applio-config", required: true }
+        },
+        inputs:1,
+        outputs:1,
+        icon: "file.png",
+        paletteLabel: "device",
+        label: function() {
+            return this.name || "device";
+        }
+    });
+</script>
+
+<script type="text/html" data-template-name="applio-device">
+    <div class="form-row">
+        <label for="node-input-config"><i class="fa fa-tag"></i>Config</label>
+        <input type="text" id="node-input-config" placeholder="Config">
+    </div>
+    <div class="form-row">
+        <label for="node-input-name"><i class="fa fa-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+</script>
+
+<script type="text/html" data-help-name="applio-device">
+    <p>A simple node that resturns connecterd devices</p>
+</script>

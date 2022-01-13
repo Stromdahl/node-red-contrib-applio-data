@@ -1,0 +1,37 @@
+<script type="text/javascript">
+    RED.nodes.registerType('applio-measurment-list',{
+        category: 'applio',
+        color: '#20c997',
+        defaults: {
+            name: {value:""},
+            config: { value:"", type: "applio-config", required: true },
+            devid: {value:"", required:true}
+        },
+        inputs:1,
+        outputs:1,
+        icon: "file.png",
+        paletteLabel: "Measurment List",
+        label: function() {
+            return this.name || "Measurment List";
+        }
+    });
+</script>
+
+<script type="text/html" data-template-name="applio-measurment-list">
+    <div class="form-row">
+        <label for="node-input-config"><i class="fa fa-tag"></i>Config</label>
+        <input type="text" id="node-input-config" placeholder="Config">
+    </div>
+    <div class="form-row">
+        <label for="node-input-name"><i class="fa fa-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+    <div class="form-row">
+        <label for="node-input-devid"><i class="fa fa-tag"></i> Device ID</label>
+        <input type="text" id="node-input-devid" placeholder="Device ID">
+    </div>
+</script>
+
+<script type="text/html" data-help-name="applio-measurment-list">
+    <p>A simple node that resturns connecterd devices</p>
+</script>
