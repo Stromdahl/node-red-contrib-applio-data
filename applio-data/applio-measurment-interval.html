@@ -1,0 +1,53 @@
+<script type="text/javascript">
+    RED.nodes.registerType('applio-measurment-interval',{
+        category: 'applio',
+        color: '#20c997',
+        defaults: {
+            name: {value:""},
+            config: { value:"", type: "applio-config", required: true },
+            devid: {value:"", required:true},
+            measurment: {value:"", required:true},
+            start: {value:"-7d", required:true},
+            end: {value:"0d", required:true}
+            
+        },
+        inputs:1,
+        outputs:1,
+        icon: "file.png",
+        paletteLabel: "measurment interval",
+        label: function() {
+            return this.name || "measurment interval";
+        }
+    });
+</script>
+
+<script type="text/html" data-template-name="applio-measurment-interval">
+    <div class="form-row">
+        <label for="node-input-config"><i class="fa fa-tag"></i>Config</label>
+        <input type="text" id="node-input-config" placeholder="Config">
+    </div>
+    <div class="form-row">
+        <label for="node-input-name"><i class="fa fa-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+    <div class="form-row">
+        <label for="node-input-devid"><i class="fa fa-tag"></i> Device ID</label>
+        <input type="text" id="node-input-devid" placeholder="Device ID">
+    </div>
+    <div class="form-row">
+        <label for="node-input-measurment"><i class="fa fa-tag"></i> Measurment</label>
+        <input type="text" id="node-input-measurment" placeholder="Measurment">
+    </div>
+    <div class="form-row">
+        <label for="node-input-start"><i class="fa fa-tag"></i> Start </label>
+        <input type="text" id="node-input-start" placeholder="Start">
+    </div>
+    <div class="form-row">
+        <label for="node-input-end"><i class="fa fa-tag"></i> End</label>
+        <input type="text" id="node-input-end" placeholder="End">
+    </div>
+</script>
+
+<script type="text/html" data-help-name="applio-measurment-interval">
+    <p>A simple node that resturns connecterd devices</p>
+</script>

@@ -11,7 +11,8 @@
     "nodes": {
       "applio-device": "applio-data/applio-device.js",
       "applio-config": "applio-data/applio-config.js",
-      "applio-measurment-list": "applio-data/applio-measurment-list.js"
+      "applio-measurment-list": "applio-data/applio-measurment-list.js",
+      "applio-measurment-interval": "applio-data/applio-measurment-interval.js"
     }
   },
   "dependencies": {
